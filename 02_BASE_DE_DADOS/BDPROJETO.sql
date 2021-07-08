@@ -1,0 +1,136 @@
+CREATE DATABASE  IF NOT EXISTS `baseteste` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `baseteste`;
+-- MySQL dump 10.13  Distrib 8.0.25, for Win64 (x86_64)
+--
+-- Host: localhost    Database: baseteste
+-- ------------------------------------------------------
+-- Server version	8.0.25
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `clientes`
+--
+
+DROP TABLE IF EXISTS `clientes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `clientes` (
+  `CODCLIE` int NOT NULL,
+  `NOME` varchar(45) DEFAULT NULL,
+  `CIDADE` varchar(45) DEFAULT NULL,
+  `ESTADO` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`CODCLIE`),
+  UNIQUE KEY `PK_CODCLIE` (`CODCLIE`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `clientes`
+--
+
+LOCK TABLES `clientes` WRITE;
+/*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+INSERT INTO `clientes` VALUES (1,'ALEXANDRE JUNIOR','CAMPINAS','SP'),(2,'MARCIO ALEXANDRE','CAMPINAS','SP'),(3,'GIOVANA OLIVEIRA','CAMPINAS','SP'),(4,'TIAGO ALMEIDA','CAMPINAS','SP'),(5,'SUSI PACHECO','CAMPINAS','SP'),(6,'ELENILDES MARJORIE','CAMPINAS','SP'),(7,'ALEXANDRE SANTOS','CAMPINAS','SP'),(8,'MARCIA DE SOUZA','CAMPINAS','SP'),(9,'ELIENE','CAMPINAS','SP'),(10,'JOAO BATISTA','CAMPINAS','SP'),(11,'ANDRE FELIPE','CAMPINAS','SP'),(12,'ROMILTON','CAMPINAS','SP'),(13,'FLAVIA ALMEIDA','CAMPINAS','SP'),(14,'ARTUR DE SOUZA','CAMPINAS','SP'),(15,'MARIA DAS GRAÇAS','CAMPINAS','SP'),(16,'PAULO ROBERTO','CAMPINAS','SP'),(17,'PEDRO ALMEIDA','CAMPINAS','SP'),(18,'ANA CAROLINA','CAMPINAS','SP'),(19,'CAROLINA','CAMPINAS','SP'),(20,'PAULO HENRRIQUE','CAMPINAS','SP');
+/*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `itens_pedvenda`
+--
+
+DROP TABLE IF EXISTS `itens_pedvenda`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `itens_pedvenda` (
+  `NROITEM` int DEFAULT NULL,
+  `NROPEDIDO` int DEFAULT NULL,
+  `CODPROD` int DEFAULT NULL,
+  `QTD` int DEFAULT NULL,
+  `VLUNIT` float DEFAULT NULL,
+  `VLTOTAL` float DEFAULT NULL,
+  `ID_ITEM_PEDVENDA` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`ID_ITEM_PEDVENDA`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `itens_pedvenda`
+--
+
+LOCK TABLES `itens_pedvenda` WRITE;
+/*!40000 ALTER TABLE `itens_pedvenda` DISABLE KEYS */;
+INSERT INTO `itens_pedvenda` VALUES (0,250,102,1,150,150,4),(1,33,104,1,100,100,9),(1,35,101,20,200,4000,15);
+/*!40000 ALTER TABLE `itens_pedvenda` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pedvenda`
+--
+
+DROP TABLE IF EXISTS `pedvenda`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pedvenda` (
+  `NROPEDIDO` int NOT NULL,
+  `DTEMISSAO` date DEFAULT NULL,
+  `VLTOTAL` decimal(10,0) DEFAULT NULL,
+  `CODCLIE` int DEFAULT NULL,
+  PRIMARY KEY (`NROPEDIDO`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pedvenda`
+--
+
+LOCK TABLES `pedvenda` WRITE;
+/*!40000 ALTER TABLE `pedvenda` DISABLE KEYS */;
+INSERT INTO `pedvenda` VALUES (33,'2021-07-07',100,4),(35,'2021-07-08',4000,10);
+/*!40000 ALTER TABLE `pedvenda` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `produtos`
+--
+
+DROP TABLE IF EXISTS `produtos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `produtos` (
+  `CODPROD` int NOT NULL AUTO_INCREMENT,
+  `DESCRICAO` varchar(150) DEFAULT NULL,
+  `PRECOVEND` float DEFAULT NULL,
+  PRIMARY KEY (`CODPROD`)
+) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `produtos`
+--
+
+LOCK TABLES `produtos` WRITE;
+/*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
+INSERT INTO `produtos` VALUES (100,'CURSO EAD TURMA AGOSTO',200),(101,'CURSO EAD TURMA JANEIRO',200),(102,'BOOTCAMP WEBDEVLOPER',150),(103,'FORMACAO CIENTISTA DE DADOS',1500),(104,'CAMISETA FRIENDS',100),(105,'CAMISETA CODERS',80),(106,'CAMISETA NARUTO',90),(107,'MOLENTON CODERS',189),(108,'CONJUNTO LIVROS DS',99.99),(109,'BONE NARUTO SHIPPUDEN',10.89),(110,'CASE BORUTO',78),(111,'CASE CODERS',20),(112,'CAMISA BORUTO',78),(113,'CAMISA TIME SETE ',78),(114,'CAMISETA THE  ORIGINALS',78),(115,'BONE FRIENDS',20),(116,'LUVAS DE ALGODAO',10),(117,'MEIAS CONJUNTO TRES PARES ',60),(118,'DVD SENHOR DOS ANEIS',1000),(119,'PEN DRIVE MUSICAS SERTANEJAS',30);
+/*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-08  0:30:10

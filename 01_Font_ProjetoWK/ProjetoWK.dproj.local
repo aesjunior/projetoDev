@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/01/17 23:08:59.000.947,=C:\Users\pc dev\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/07/05 20:33:15.000.057,=C:\Users\pc dev\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/07/05 20:34:58.000.690,C:\Users\pc dev\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\uCadPedVenda.dfm</Transaction>
+    <Transaction>2021/07/05 20:34:58.000.690,C:\Users\pc dev\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\uCadPedVenda.pas</Transaction>
+    <Transaction>2021/07/05 20:35:16.000.251,C:\Users\pc dev\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\ProjVK.dproj</Transaction>
+    <Transaction>2021/07/05 21:37:04.000.823,=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\Unit1.pas</Transaction>
+    <Transaction>2021/07/05 21:39:29.000.782,C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\Unit1.pas=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\uSelitens.pas</Transaction>
+    <Transaction>2021/07/05 21:39:29.000.782,C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\Unit1.dfm=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\uSelitens.dfm</Transaction>
+    <Transaction>2021/07/06 21:07:54.000.511,=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\Unit1.pas</Transaction>
+    <Transaction>2021/07/06 21:08:24.000.900,C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\uDmConexao.dfm=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\Unit1.dfm</Transaction>
+    <Transaction>2021/07/06 21:08:24.000.900,C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\uDmConexao.pas=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\Unit1.pas</Transaction>
+    <Transaction>2021/07/06 22:00:56.000.784,C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\uDmConexao.pas=</Transaction>
+    <Transaction>2021/07/08 00:22:42.323,C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\ProjetoWK.dproj=C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\ProjVK.dproj</Transaction>
+    <Transaction>2021/07/08 00:22:53.416,C:\Users\pc dev\Documents\2020_09_27_RFPJ\Nova pasta\uSelitens.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

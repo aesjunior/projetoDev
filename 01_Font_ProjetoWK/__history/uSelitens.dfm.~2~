@@ -1,0 +1,41 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 525
+  ClientWidth = 746
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object cxGroupBox1: TcxGroupBox
+    Left = 0
+    Top = 0
+    Align = alTop
+    Caption = 'Itens'
+    TabOrder = 0
+    ExplicitLeft = -24
+    ExplicitTop = 120
+    Height = 137
+    Width = 746
+    object DBText2: TDBText
+      Left = 84
+      Top = 24
+      Width = 65
+      Height = 17
+      Enabled = False
+    end
+    object Label1: TLabel
+      Left = 25
+      Top = 24
+      Width = 50
+      Height = 13
+      Caption = 'Nro Item.:'
+    end
+  end
+end

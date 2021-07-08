@@ -1,0 +1,24 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 413
+  Width = 421
+  object DataBase: TFDConnection
+    Params.Strings = (
+      'Database=baseteste'
+      'User_Name=root'
+      'Password=euju2707'
+      'DriverID=MySQL')
+    Left = 183
+    Top = 118
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\Program Files\MySQL\MySQL Router 8.0\lib\libmysql.dll'
+    Left = 167
+    Top = 54
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 103
+    Top = 70
+  end
+end
